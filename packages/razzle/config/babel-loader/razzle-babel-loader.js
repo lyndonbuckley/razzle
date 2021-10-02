@@ -196,8 +196,7 @@ module.exports = babelLoader.custom(function(babel) {
         require.resolve('babel-plugin-transform-define'),
         {
           'process.env.NODE_ENV': development ? 'development' : 'production',
-          'typeof window': isServer ? 'undefined' : 'object',
-          'process.browser': isServer ? false : true,
+          'typeof window': isServer ? 'undefined' : 'object'
         },
         'razzle-js-transform-define-instance',
       ]);
